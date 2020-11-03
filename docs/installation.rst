@@ -225,8 +225,8 @@ Certains paramètres sont gérés depuis la table ``geopaysages.conf`` de la bas
 ::
 
     {
-      "iconUrl": "static/custom/images/custom_marker.png",
-      "shadowUrl": "static/custom/images/custom_marker_shadow.png",  
+      "iconUrl": "../../static/custom/images/custom_marker.png",
+      "shadowUrl": "../../static/custom/images/custom_marker_shadow.png",  
       "iconSize": [40, 40],
       "shadowSize": [46, 20],
       "iconAnchor": [20, 40],
@@ -234,7 +234,7 @@ Certains paramètres sont gérés depuis la table ``geopaysages.conf`` de la bas
       "popupAnchor": [0, -20]
     }
 
-/!\ Une mauvaise syntaxe ou de mauvaises valeurs impacteront le bon fonctionnement des cartes. 
+ATTENTION : Une mauvaise syntaxe ou de mauvaises valeurs impacteront le bon fonctionnement des cartes. 
 
 Pour en savoir plus sur les options disponibles de la méthode ``L.icon`` et son utilisation, reportez-vous à la documentation Leaflet : https://leafletjs.com/reference-1.7.1.html#icon 
 et aux tutoriels disponibles : https://leafletjs.com/examples/custom-icons/
