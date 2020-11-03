@@ -58,6 +58,7 @@
   document.onreadystatechange = () => {
     if (document.readyState == 'complete') {
       geopsg.initHome({
+        dbconf: {{dbconf | tojson}},
         sites: {{sites | tojson}}
       })
     }

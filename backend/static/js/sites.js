@@ -177,6 +177,10 @@ geopsg.initSites = (options) => {
           lats.push(site.latlon[0])
           lons.push(site.latlon[1])
           let marker = L.marker(site.latlon)
+          if (options.dbconf.map_custom_marker && Object.keys(options.dbconf.map_custom_marker).length) {
+            var customIcon = L.icon(JSON.parse(JSON.stringify(options.dbconf.map_custom_marker)))
+            marker = L.marker(site.latlon, {icon: customIcon})
+          }
           site.marker = marker
           markerText = site.name_site + '<br />' + site.ville.label
           marker.bindPopup('<div class="img" style="background-image: url(' + site.photos[site.photos.length - 1].url + ');"></div><div class="title">' + markerText + '</div>', {

@@ -147,6 +147,15 @@ INSERT INTO geopaysages.conf (key, value) VALUES ('external_links', '[{
 ');
 INSERT INTO geopaysages.conf (key, value) VALUES ('zoom_max_fitbounds_map', '13');
 INSERT INTO geopaysages.conf (key, value) VALUES ('zoom_map_comparator', '13');
+INSERT INTO geopaysages.conf (key, value) VALUES ('map_custom_marker', '{
+  "iconUrl": "../../static/custom/images/custom_marker.png", 
+  "shadowUrl": "../../static/custom/images/custom_marker_shadow.png", 
+  "iconSize": [40, 40], 
+  "shadowSize": [46, 20], 
+  "iconAnchor": [20, 40], 
+  "shadowAnchor": [12, 18], 
+  "popupAnchor": [0, -20]
+}');
 
 --
 -- TOC entry 3814 (class 0 OID 21076)

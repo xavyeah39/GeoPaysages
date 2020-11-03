@@ -41,7 +41,12 @@ geopsg.initHome = (options) => {
   options.sites.forEach(site => {
     lats.push(site.geom[0])
     lons.push(site.geom[1])
-    L.marker(site.geom).addTo(map)
+    let marker = L.marker(site.geom)
+    if (options.dbconf.map_custom_marker && Object.keys(options.dbconf.map_custom_marker).length) {
+      var customIcon = L.icon(JSON.parse(JSON.stringify(options.dbconf.map_custom_marker)))
+      marker = L.marker(site.geom, {icon: customIcon})
+    }
+    marker.addTo(map)
     lats.sort()
     lons.sort()
     map.fitBounds([

@@ -220,6 +220,26 @@ Certains paramètres sont gérés depuis la table ``geopaysages.conf`` de la bas
           }
         ]
 
+
+- ``map_custom_marker`` permet de personnaliser le marqueur de localisation des sites (en surcouchant celui par défaut hérité de la librairie Leaflet) dans les différentes cartes de l'application.  Si le paramètre à une valeur ``NULL`` ou si il est absent de la table ``geopaysages.conf``, le marqueur Leaflet par défaut s'affichera. Lors d'une nouvelle installation, le paramètre sera tout de même crée et renseigné comme suit à titre d'exemple :
+::
+
+    {
+      "iconUrl": "static/custom/images/custom_marker.png",
+      "shadowUrl": "static/custom/images/custom_marker_shadow.png",  
+      "iconSize": [40, 40],
+      "shadowSize": [46, 20],
+      "iconAnchor": [20, 40],
+      "shadowAnchor": [12, 18], 
+      "popupAnchor": [0, -20]
+    }
+
+/!\ Une mauvaise syntaxe ou de mauvaises valeurs impacteront le bon fonctionnement des cartes. 
+
+Pour en savoir plus sur les options disponibles de la méthode ``L.icon`` et son utilisation, reportez-vous à la documentation Leaflet : https://leafletjs.com/reference-1.7.1.html#icon 
+et aux tutoriels disponibles : https://leafletjs.com/examples/custom-icons/
+
+
 Si vous utiliser la version 2 du comparateur photos (paramètre ``COMPARATOR_VERSION = 2`` dans ``config.py.tpl``), vous pouvez personnaliser celui-ci selon votre contexte. Notamment le simplifier dans le cas de série de photos sur des pas temps plutôt espacés (reconductions pluri-annuelles, annuelles voire mensuelles) :
 
 - ``comparator_date_filter``, permet d'activer ``True`` ou de désactiver ``False`` l'outil de filtrage par plage de dates (actif par défaut si le paramètre n'est pas renseigné). Celui-ci étant peu utile dans le cas de petites séries de photos ou de reconductions annuelles par exemple.

@@ -100,7 +100,12 @@ geopsg.site = (options) => {
           L.control.layers(controlLayers).addTo(map);
         }
 
-        L.marker(options.site.geom).addTo(map)
+        let marker = L.marker(options.site.geom)
+        if (options.dbconf.map_custom_marker && Object.keys(options.dbconf.map_custom_marker).length) {
+          var customIcon = L.icon(JSON.parse(JSON.stringify(options.dbconf.map_custom_marker)))
+          marker = L.marker(options.site.geom, {icon: customIcon})
+        }
+        marker.addTo(map)
       }
     }
   })
