@@ -183,7 +183,7 @@ geopsg.initSites = (options) => {
           }
           site.marker = marker
           markerText = site.name_site + '<br />' + site.ville.label
-          if (options.dbconf.map_popup_ref_site == 'True') {
+          if (site.ref_site) {
             markerText += '<br/>' + '(réf : ' + site.ref_site + ')'
           }
           marker.bindPopup('<div class="img" style="background-image: url(' + site.photos[site.photos.length - 1].url + ');"></div><div class="title">' + markerText + '</div>', {
