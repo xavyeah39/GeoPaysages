@@ -25,6 +25,8 @@
   {% autoescape false %}{{ intro }}{% endautoescape %}
   {% endif %}
 
+  <section id="discover">
+  <h3>{{ _('home.block.discover_title') }}</h3>
   <div class="blocks">
 
     <div class="block block-map">
@@ -48,6 +50,7 @@
     {% endfor %}
     
   </div>
+  </section>
 
   {% if dbconf.home_intro_position == 'bottom': %}
   {% autoescape false %}{{ intro }}{% endautoescape %}
