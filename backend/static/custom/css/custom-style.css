@@ -185,7 +185,14 @@ h4 {
     background-color: rgba(255,0,0,1) !important;
     font-weight: bold;
 }
-
+/* largeur des popup et affichage thumbnails */
+.app-sites .leaflet-popup-content .title {
+    width: 180px !important;
+}
+.app-sites .leaflet-popup-content .img {
+    width: 180px !important;
+    background-size: cover !important;
+}
 
 /* SITE */
 /* marge de la légende du site */
