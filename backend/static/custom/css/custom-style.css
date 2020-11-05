@@ -2,8 +2,8 @@
 :root {
     --color-primary: #00188F;
     --color-primary-light: #0069d9;
-    --color-secondary: rgba(255,182,0,1);
-    --color-secondary-light: rgba(255,182,0,0.8);
+    --color-secondary: rgba(139, 211, 209, 1);
+    --color-secondary-light: rgba(139, 211, 209, 0.8);
 
     --color-discover: rgba(153, 214, 234, 0.5);
 
@@ -46,9 +46,9 @@ p, a, .text-center, .text-light {
 /* HOME */
 /* Navbar */
 .navbar-nav{
-    background: #2C2D87;
+    background: #eaeaea;/*#2C2D87;*/
 }
-.nav-bar {
+/*.nav-bar {
     padding-top: 0px;
     padding-right: 0px;
 }
@@ -60,7 +60,7 @@ p, a, .text-center, .text-light {
 }
 .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(255,182,0,1);
-}
+}*/
 /* Header logo */
 .header-logo {
     height: 140px;
@@ -208,13 +208,14 @@ h4 {
     text-transform: uppercase;
     color: rgba(66,66,66,1) !important;
     padding: 7px 0 0 12px !important;
-    background-color: rgba(255,182,0,1) !important;
+    background-color: var(--color-secondary) !important;
 }
 .page-site .btn-secondary {
     color: rgba(66,66,66,1) !important;
 }
-.page-site .dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active, .dropdown-item:active {
     color: #000;
+    background-color: var(--color-discover) !important;
 }
 .page-site .page-item.active .page-link {
     color: #000;
