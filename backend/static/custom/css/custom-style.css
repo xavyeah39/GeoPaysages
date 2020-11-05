@@ -2,8 +2,8 @@
 :root {
     --color-primary: #00188F;
     --color-primary-light: #0069d9;
-    --color-secondary: #78BE20;
-    --color-secondary-light: #72d409;
+    --color-secondary: rgba(255,182,0,1);
+    --color-secondary-light: rgba(255,182,0,0.8);
 
     --color-discover: rgba(153, 214, 234, 0.5);
 
@@ -13,7 +13,377 @@
     --color-sites-filter-bg-active: #99D6EA;
 
     --page-container-min-height: calc(100vh - 415px);
+    
+    /* smooth scrolling effect */
+    scroll-behavior: smooth;
 }
+
+/* GLOBAL */
+/* Fonts */
+@font-face {
+    font-family: 'ResoBold';
+    src:url('../fonts/ResoBold/ResoBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ResoLight';
+    src:url('../fonts/ResoLight/ResoLight.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-italic {
+    font-family: 'ResoLight'; !important;
+}
+
+p, a, .text-center, .text-light {
+    font-family: 'ResoLight';
+    font-size: 16px;
+}
+
+/* HOME */
+/* Navbar */
+.navbar-nav{
+    background: #2C2D87;
+}
+.nav-bar {
+    padding-top: 0px;
+    padding-right: 0px;
+}
+.navbar-light .navbar-nav .active>.nav-link {
+    color: rgba(255,255,255,.9);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255,182,0,1);
+}
+/* Header logo */
+.header-logo {
+    height: 140px;
+    z-index: 9999;
+}
+
+/* Header Title */
+header h1 {
+    font-size: 1.8em;
+    color: rgba(0,24,143,1);
+    line-height: 30px;
+}
+header h3 {
+    line-height: 25px;
+}
+.header-title {
+    justify-content: left;
+    margin-bottom: 15px;
+    padding-left: 160px;
+}
+#header {
+    height: 115px;
+    margin-bottom: 15px;
+    background: #eaeaea;
+    z-index: 9999;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6, .sans-serif, .btn {
+    font-family: ResoBold,Helvetica,Arial,sans-serif !important;
+    font-weight: lighter !important;
+}
+h3.text-uppercase {
+    /*font-family: ResoLight,Helvetica,Arial,sans-serif;*/
+    color: rgba(0,24,143,.9);
+    /*color: rgba(255,182,0,1);*/
+}
+h3 {
+    /*font-family: ResoLight,Helvetica,Arial,sans-serif !important;*/
+    font-size: 1.5em !important;
+    color: rgba(0,24,143,.9) !important;
+    /*color: rgba(255,182,0,1);*/
+}
+h5.text-uppercase {
+    /*font-family: ResoBold,Helvetica,Arial,sans-serif;*/
+    color: #2C2D87;
+}
+h4 {
+    /*font-family: ResoLight,Helvetica,Arial,sans-serif;*/
+    /*font-weight: bold;*/
+    font-size: 18px !important;
+    margin-top: 5px !important;
+}
+
+/* Bloc lien map */
+.page-home .block-map a {
+    font-family: ResoLight,Helvetica,Arial,sans-serif !important;
+    font-size: 1.4em !important;
+}
+
+/* Background */
+.page-home .page-content {
+    background: rgba(252,252,252,1) !important;
+}
+
+/* MAP */
+/* couleur de la barre "reduire" sidebar de la carte */
+.app-sites .sidebar .btn-toggle {
+    background: rgba(234, 234, 234, .9) !important;
+}
+.btn-big-icon .icon {
+    color: #000 !important;
+}
+/* couleurs de la sidebar carte */
+.app-sites .sidebar-content {
+    background: rgba(234, 234, 234, .9) !important;
+}
+.app-sites .sidebar .filters .card-header .btn, .app-map .sidebar .btn-site {
+    color: #000 !important;
+}
+.app-sites .sidebar .filters .card-body .btn, .app-map .sidebar .btn-site {
+    color: #000 !important;
+}
+.app-sites .sidebar .card-group-header-btn {
+    background: rgba(0,0,0,.1) !important;
+    text-align: left !important;
+    padding-top: 14px !important;
+    color: rgba(0,24,143,1) !important;
+}
+.app-sites .sidebar .btn-site, .btn-default {
+    font-family: ResoLight,Helvetica,Arial,sans-serif !important;
+    color: #000 !important;
+}
+/* couleur de font de la page des sites */
+.page-sites {
+    background: #eaeaea !important;
+}
+
+/* baisser l'index z de la sidebar de la carte (logo au dessus) */
+.app-sites .sidebar {
+    z-index: 9998 !important;
+}
+/* hauteur du bloc de carte relative à celle du header */
+.app-sites {
+    height: calc(100vh - 115px) !important;
+}
+
+/* marge sur le résultat des filtres + bouton annuler */
+.app-sites .sidebar .text-right{
+    margin-top: 10px !important;
+}
+/* couleur du texte annuler les filtres */
+.app-sites .sidebar .align-text-top {
+    color: var(--color-primary) !important;
+}
+/* couleur du bouton annuler les filtres */
+.app-sites .sidebar .btn-clear-primary {
+    background-color: var(--color-primary) !important;
+}
+/* couleur du bouton annuler les filtres au survol */
+.app-sites .sidebar .btn-clear-primary:hover {
+    background-color: rgba(255,0,0,1) !important;
+    font-weight: bold;
+}
+
+
+/* SITE */
+/* marge de la légende du site */
+.page-site .text-center {
+    margin-top: 10px !important;
+}
+/* taille de la carte des fiches sites + margin */
+.page-comparator .page-content .map-wrapper {
+    height: 330px !important;
+    margin-bottom: 0px !important;
+}
+
+/* COMPARATOR */
+/* Personnalisation des boutons */
+.page-site .app-comparator .photo-selector .btn-secondary {
+    font-size: 18px !important;
+}
+.page-site .app-comparator .mode-selector-label {
+    font-family: ResoBold,Helvetica,Arial,sans-serif !important;
+    text-transform: uppercase;
+    color: rgba(66,66,66,1) !important;
+    padding: 7px 0 0 12px !important;
+    background-color: rgba(255,182,0,1) !important;
+}
+.page-site .btn-secondary {
+    color: rgba(66,66,66,1) !important;
+}
+.page-site .dropdown-item.active, .dropdown-item:active {
+    color: #000;
+}
+.page-site .page-item.active .page-link {
+    color: #000;
+    background-color: var(--color-discover) !important;
+    border-color: var(--color-discover) !important;
+}
+/* Marge sous le comparateur */
+.page-site .app-comparator {
+    margin-bottom: 40px;
+}
+
+.page-site .app-comparator .photo-selector .date-selector .dropdown-menu {
+    color: #000;
+    background-color: rgba(255,255,255,0.8) !important;
+    min-width: 175px !important;
+}
+.page-site .app-comparator .photo-selector .date-selector .dropdown-menu .dropdown-item:focus, .dropdown-item:hover {
+    background-color: var(--color-discover);
+}
+.page-site .app-comparator .photo-selector .date-selector .dropdown-menu .dropdown-item {
+    font-family: ResoLight,Helvetica,Arial,sans-serif !important;
+}
+
+
+
+/* HOME CUSTOM WELCOME BLOCK */
+.page-home #header  {
+    margin-bottom: 0px !important;
+}
+
+@keyframes breath {
+  0%   { background-size: 100% auto; }
+  50% { background-size: 103% auto; }
+  100% { background-size: 100% auto; }
+}
+
+#welcome {
+    background-image: url('../images/bg_welcome.jpg');
+    width: 100%;
+    position: relative;
+    min-height: calc(100vh - 115px);
+    margin-bottom: 30px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: breath 8s linear infinite;
+}
+
+section {
+    display: block;
+}
+
+
+#welcome a.scroll {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    color: #fff;
+    transform: translateX(-50%);
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    background-color: transparent !important;
+    width: fit-content;
+    min-width: 100px;
+    text-align: center;
+}
+
+#welcome .scroll img {
+    width: 15px;
+    height: auto;
+    margin: auto;
+}
+
+#welcome:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: -moz-linear-gradient( top, rgba(0, 0, 0, 0.300) 0%, rgba(0, 0, 0, 0.200) 1%, rgba(0, 0, 0, 0.200) 99%, rgba(0, 0, 0, 0.300) 100%);
+    background: -webkit-linear-gradient( top, rgba(0, 0, 0, 0.300) 0%, rgba(0, 0, 0, 0.200) 1%, rgba(0, 0, 0, 0.200) 99%, rgba(0, 0, 0, 0.300) 100%);
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.300) 0%, rgba(0, 0, 0, 0.200) 1%, rgba(0, 0, 0, 0.200) 99%, rgba(0, 0, 0, 0.300) 100%);
+}
+
+#welcome>h1 {
+    padding-left: 50%;
+    font-size: 60px;
+}
+
+#welcome>p {
+    padding-left: 30%;
+    font-size: 30px;
+}
+
+#welcome>h1,
+#welcome>p {
+    font-family: 'Hind', sans-serif;
+    margin-top: 30px;
+    color: #fff;
+    user-select: none;
+}
+
+#welcome .carousel-text-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    max-width: 40%;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+}
+
+#welcome .carousel-text {
+    background-color: #eeeeeecf;
+    padding: 35px 20px 35px 35px;
+    min-width: 100%;
+    max-height: 80%;
+    min-height: 80px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#welcome .carousel-text div {
+    max-height: 50%;
+    overflow-y: auto;
+    margin-bottom: 1em;
+    color: black;
+    font-size: 14px
+}
+
+#welcome .carousel-text h3 {
+    font-family: "Satisfy";
+    color: var(--ternary);
+}
+
+#welcome .carousel-text>p {
+    font-style: italic;
+    overflow: auto;
+    font-size: 16px;
+    color: black;
+}
+
+
+#welcome .blue-btn {
+  background-color: #283371;
+  color: #fff;
+  border: none;
+  padding: 5px 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+  width: fit-content;
+}
+
+#discover h3 {
+    margin: 20px auto;
+    position: relative;
+    width: 50%;
+    transform-origin: left;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
 
 /* css Footer */
 footer{
@@ -24,4 +394,8 @@ footer{
 }
 .app-footer hr {
     border-color: #FFF;
+}
+/* Ajuster la largeur de la colonne du footer */
+.col-lg-11 {
+    max-width: 100%;
 }
