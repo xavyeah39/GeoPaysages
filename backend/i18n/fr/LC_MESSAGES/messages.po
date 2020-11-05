@@ -48,11 +48,15 @@ msgstr "Galerie photo"
 
 #: backend/tpl/home.html:3
 msgid "home.meta_title"
-msgstr "Observatoire photographique des paysages de Vanoise"
+msgstr "Pilat Paysages"
 
 #: backend/tpl/home.html:16
 msgid "home.title"
-msgstr "L'Observatoire photographique des paysages de Vanoise"
+msgstr "Pilat Paysages"
+
+#: tpl/home.html:29
+msgid "home.block.discover_title"
+msgstr "Découvrez les paysages du Pilat"
 
 #: backend/tpl/home.html:32
 msgid "home.block.explore_sites"
@@ -104,15 +108,15 @@ msgstr "Contactez-nous"
 
 #: backend/tpl/layout.html:107
 msgid "footer.external_title"
-msgstr "Le Parc national de Vanoise"
+msgstr "Le Parc naturel régional du Pilat"
 
 #: backend/tpl/layout.html:124
 msgid "footer.copyright"
-msgstr "© 2018 Parc national de la Vanoise"
+msgstr "© 2020 Parc naturel régional du Pilat"
 
 #: backend/tpl/site.html:48
 msgid "obs_point.buttons.notice"
-msgstr "Notice technique pour le photographe"
+msgstr "Fiche détaillée"
 
 #: backend/tpl/site.html:53
 msgid "obs_point.buttons.obs"
@@ -132,7 +136,7 @@ msgstr "Lire moins"
 
 #: backend/tpl/site.html:71
 msgid "obs_point.testimonials"
-msgstr "Témoignages"
+msgstr "Analyses paysagère"
 
 #: backend/tpl/sites.html:3
 msgid "sites.meta_title"
@@ -150,7 +154,11 @@ msgstr "Filtrer par"
 msgid "sites.filters.nb_result"
 msgstr "filtres : %(nb)s résultat(s)"
 
-#: backend/tpl/sites.html:75
+#: backend/tpl/sites.html:43
+msgid "sites.filters.cancel"
+msgstr "ANNULER LES FILTRES"
+
+#: backend/tpl/sites.html:76
 msgid "sites.observation_points.title"
 msgstr "Sites d'observation"
 
