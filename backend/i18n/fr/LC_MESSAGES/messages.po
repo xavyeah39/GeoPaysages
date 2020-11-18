@@ -48,11 +48,11 @@ msgstr "Galerie photo"
 
 #: backend/tpl/home.html:3
 msgid "home.meta_title"
-msgstr "Pilat Paysages"
+msgstr "OPP du Pilat"
 
 #: backend/tpl/home.html:16
 msgid "home.title"
-msgstr "Pilat Paysages"
+msgstr "Observatoire Photographique des Paysages du Pilat"
 
 #: tpl/home.html:29
 msgid "home.block.discover_title"
