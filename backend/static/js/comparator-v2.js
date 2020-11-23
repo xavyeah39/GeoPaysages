@@ -182,7 +182,7 @@ geopsg.comparator = (options) => {
           dateFrom: null,
           dateTo: null,
           currentPage: 1,
-          perPage: 10,
+          perPage: options.dbconf.comparator_date_items_per_page ?? 10,
           pageItems: [],
           nbFilteredItems: 0,
           steps: [{
@@ -197,7 +197,7 @@ geopsg.comparator = (options) => {
           dateFrom: null,
           dateTo: null,
           currentPage: 1,
-          perPage: 10,
+          perPage: options.dbconf.comparator_date_items_per_page ?? 10,
           pageItems: [],
           nbFilteredItems: 0,
           steps: [{
@@ -215,7 +215,7 @@ geopsg.comparator = (options) => {
           dateFrom: null,
           dateTo: null,
           currentPage: 1,
-          perPage: 10,
+          perPage: options.dbconf.comparator_date_items_per_page ?? 10,
           pageItems: [],
           nbFilteredItems: 0,
           steps: [{
