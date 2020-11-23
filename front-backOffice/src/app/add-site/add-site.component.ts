@@ -45,9 +45,10 @@ export class AddSiteComponent implements OnInit, OnDestroy {
   });
   options = {
     layers: [
-      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+      //tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+      tileLayer('https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg')
     ],
-    zoom: 10,
+    zoom: 11,
     center: latLng(Conf.map_lat_center, Conf.map_lan_center)
   };
   drawOptions = {

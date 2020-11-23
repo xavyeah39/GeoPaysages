@@ -17,14 +17,15 @@ import { ToastrService } from 'ngx-toastr';
 export class ManageSitesComponent implements OnInit, OnDestroy {
 	map;
 	options = {
-		layers: [ tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') ],
-		zoom: 10,
-		center: latLng(45.372167, 6.819077)
+		layers: [ tileLayer('https://wxs.ign.fr/choisirgeoportail/geoportail/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=GEOGRAPHICALGRIDSYSTEMS.MAPS&STYLE=normal&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}&FORMAT=image%2Fjpeg') ],
+     	//tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') ],
+		zoom: 11,
+		center: latLng(45.44000, 4.5860)
 	};
 	rows = [];
 	sitesLoaded = false;
 	markers: Layer[] = [];
-	center = latLng(45.372167, 6.819077);
+	center = latLng(45.44000, 4.5860);
 	zoom: number;
 
 	constructor(
