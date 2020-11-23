@@ -87,7 +87,7 @@ geopsg.comparator = (options) => {
           crs: L.CRS.Simple,
           center: [0, 0],
           zoomControl: hasZoom,
-          zoom: 2,
+          zoom: 1.5,
           zoomSnap: 0.25,
           minZoom: -5,
           gestureHandling: true
